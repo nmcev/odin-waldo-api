@@ -78,7 +78,7 @@ router.post('/api/submitName', async (req, res) => {
 
 router.get('/users', async (req, res) => {
   try {
-    const users = await User.find({});
+    const users = await User.find({duration: 1});
 
     return res.status(200).json({ users });
   } catch (error) {
